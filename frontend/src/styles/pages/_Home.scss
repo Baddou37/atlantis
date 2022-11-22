@@ -1,0 +1,38 @@
+.home {
+  max-width: 1440px;
+  margin: 0 auto;
+  .display_text1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text1 {
+      width: 40%;
+      font-family: $font1;
+      line-height: 140%;
+    }
+
+    img {
+      width:40%;
+      height: auto;
+    }
+  }
+
+  .display_text2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+    .text2 {
+      width: 40%;
+      font-family: $font1;
+      line-height: 140%;
+    }
+
+    img {
+      width:40%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.not_found_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: auto;
+    height: auto;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        background: -webkit-linear-gradient(
+            90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 25%,
+            rgba(0, 212, 255, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 288px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        color : $color1;
+        text-align: center;
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    .NotFound_desktop {
+        display: block;
+    }
+
+    .NotFound_mobile {
+        display: none;
+    }
+
+    .back_link {
+        font-weight: 500;
+        font-size: 14px;
+        color: $color1;
+        :hover {
+            position: relative;
+
+    &::after {
+        content: "";
+        height: 1px;
+        width: 0;
+        background: $color1;
+        position: absolute;
+        border-radius: 10px;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation: anim 0.3s ease forwards;
+        animation: anim 0.6s ease forwards;
+
+        @-webkit-keyframes anim {
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes anim {
+            to {
+                width: 100%;
+            }
+        }
+    }
+        }
+        @media screen and (min-width: 500px) {
+            font-size: 18px;
+        }
+    }
+}

@@ -10,7 +10,7 @@ const atlanteSchema = mongoose.Schema({
         minlenght: 2,
         maxlenght: 20,
     },
-    Skills: {
+    skills: {
         strength: { type: Number, required: true, min: 0, max: 10, default: 5 },
         speed: { type: Number, required: true, min: 0, max: 10, default: 5 },
         stamina: { type: Number, required: true, min: 0, max: 10, default: 5 },
@@ -24,7 +24,7 @@ const atlanteSchema = mongoose.Schema({
             default: 5,
         },
     },
-    Accessory: {
+    accessory: {
         type: String,
         required: true,
     },

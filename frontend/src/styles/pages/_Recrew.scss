@@ -1,0 +1,34 @@
+.recrew_display {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .recrew {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+
+    .text {
+      width: 40%;
+    }
+
+    img {
+      width:40%;
+      height: auto;
+    }
+  }
+
+  .enrollment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+}

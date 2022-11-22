@@ -1,0 +1,14 @@
+@import './settings';
+
+// Display
+@import './components/Header';
+@import './components/Footer';
+
+// Pages
+@import './pages/Home';
+@import './pages/Recrew';
+@import './pages/Atlantes';
+@import './pages/NotFound';
+
+// Components
+@import './components/Form';
