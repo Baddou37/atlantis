@@ -1,0 +1,41 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 250px;
+  height:450px;
+  background-color: $color4;
+  border-radius: 15px;
+  padding: 0 10px 0 15px;
+
+  &:hover {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    padding: 5px;
+    background-color: $color3;
+    color: $color4;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color1;
+      color: $color3;
+    }
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $color3;
+  }
+}

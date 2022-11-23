@@ -48,6 +48,16 @@ const Form = () => {
     setInputIntelligence(e.target.value);
   };
 
+  // skill randomizer
+  const randomizeSkills = () => {
+    setInputStrengh(Math.floor(Math.random() * 10) + 1);
+    setInputSpeed(Math.floor(Math.random() * 10) + 1);
+    setInputStamina(Math.floor(Math.random() * 10) + 1);
+    setInputAgility(Math.floor(Math.random() * 10) + 1);
+    setInputFighting(Math.floor(Math.random() * 10) + 1);
+    setInputIntelligence(Math.floor(Math.random() * 10) + 1);
+  };
+
   // Accessory
   const options = [
     { value: "none", label: "Aucun" },
@@ -107,7 +117,20 @@ const Form = () => {
         .catch((err) => {
           console.log(err);
         });
+    } else {
+      console.log("Formulaire invalide");
+      if (!isValidName) {
+        console.log("Nom invalide");
+      }
+      if (!isValidAccessory) {
+        console.log("Accessoire invalide");
+      }
     }
+  };
+
+  // refresh
+  const refreshPage = () => {
+    window.location.reload();
   };
 
   return (
@@ -117,7 +140,7 @@ const Form = () => {
           <label htmlFor="name">Nom</label> <br />
           <input
             type="text"
-            name="name" // name is required for the form to work
+            name="name"
             id="name"
             value={inputName}
             onChange={checkNameValidity}
@@ -129,7 +152,7 @@ const Form = () => {
                 : "form-control"
             }
           />
-          <div className="invalid-feedback">Veuillez entrer un nom valide.</div>
+          <div className="consigne">Veuillez choisir nom compris entre 2 et 20 caractères</div>
         </div>
         <div className="form-group">
           <label htmlFor="strengh">Force : {inputStrengh}</label> <br />
@@ -207,6 +230,14 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
+        <button
+          type="button"
+          onClick={randomizeSkills} 
+        >
+          <span>Random</span>
+        </button>
+        </div>
+        <div className="form-group">
           <label htmlFor="accessory">Accessoire</label> <br />
           <select
             name="accessory"
@@ -228,16 +259,15 @@ const Form = () => {
             ))}
           </select>
           <div 
-          className="invalid-feedback"
-          style={{ display: inputAccessory === "none" ? "block" : "none" }}
+          className="consigne"
+          style={{display: inputAccessory === "none" ? "block" : "none"}}
           >
-            Veuillez choisir un accessoire.
-          </div>
+            Veuillez choisir un accessoire.</div>
         </div>
         <div className="form-group">
-          <button type="submit">
-            Enrôler
-          </button>
+          <button
+          onClick={refreshPage}
+          type="submit">Enrôler</button>
         </div>
       </form>
     </div>

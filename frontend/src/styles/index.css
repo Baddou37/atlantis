@@ -199,12 +199,19 @@ header nav ul li:nth-child(1) {
 }
 .recrew_display .recrew {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  height: auto;
+  margin: 30px auto;
 }
-.recrew_display .recrew .text {
-  width: 40%;
+.recrew_display .recrew .crew {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 45px;
 }
 .recrew_display .recrew img {
   width: 40%;
@@ -301,15 +308,38 @@ header nav ul li:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.enrollment_display .consigne {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8em;
 }
 .enrollment_display .form-group input {
+  text-align: center;
   width: 300px;
   height: 30px;
   border-radius: 5px;
   border: none;
   padding: 5px;
   margin-top: 10px;
+}
+.enrollment_display .form-group input:focus {
+  outline: none;
+}
+.enrollment_display .form-group select {
+  text-align: center;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+}
+.enrollment_display .form-group select:focus {
+  outline: none;
 }
 .enrollment_display .form-group button {
   width: 300px;
@@ -326,8 +356,47 @@ header nav ul li:nth-child(1) {
 .enrollment_display .form-group button:hover {
   background-color: rgb(9, 9, 121);
   color: #fff;
+  border: rgb(9, 9, 121);
 }
 .enrollment_display .form-group button:active {
   background-color: #f4f4f4;
+  color: #fff;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 250px;
+  height: 450px;
+  background-color: #2BE3FA;
+  border-radius: 15px;
+  padding: 0 10px 0 15px;
+}
+.box:hover {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.box button {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: none;
+  padding: 5px;
+  background-color: #fff;
+  color: #2BE3FA;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.box button:hover {
+  background-color: rgb(9, 9, 121);
+  color: #fff;
+}
+.box p {
+  font-size: 1.2em;
+  font-weight: bold;
   color: #fff;
 }/*# sourceMappingURL=index.css.map */

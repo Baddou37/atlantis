@@ -9,16 +9,23 @@
 
   .recrew {
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    height: auto;
+    margin: 30px auto;
 
-    .text {
-      width: 40%;
+    .crew {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 45px;
     }
 
     img {
-      width:40%;
+      width: 40%;
       height: auto;
     }
   }
@@ -30,5 +37,4 @@
     align-items: center;
     margin-top: 30px;
   }
-  
 }
